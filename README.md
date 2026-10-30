@@ -44,6 +44,26 @@ Skill path: `skills/kestra-flow-hardening/SKILL.md`
 
 ---
 
+### kestra-install
+
+Provision and configure a self-hosted Kestra server on a standalone host, Docker Compose, or
+Kubernetes, with edition-aware backend selection and safe Enterprise Edition license delivery.
+
+**Use when:**
+- Installing a new Kestra server
+- Choosing an OSS or EE backend for a new deployment
+- Configuring EE licensing without committing credentials
+
+**Covers:**
+- EE backend gate before generating or applying configuration
+- `KESTRA_EE_LICENSE_*` injection for Docker Compose and systemd
+- Kubernetes Secret mounting through the official chart's `configurations.secrets`
+- Inline `configurations.application` caveats and private EE artifact access
+
+Skill path: `skills/kestra-install/SKILL.md`
+
+---
+
 ### kestra-ops
 
 Operate Kestra using `kestractl` for flow, execution, namespace, and namespace-file operations.
@@ -135,6 +155,10 @@ Use migrate-airflow-kestra to migrate dags/ingest_pipeline.py from Airflow to Ke
     │   ├── SKILL.md
     │   └── references/
     │       └── hardening-patterns.md
+    ├── kestra-install/
+    │   ├── SKILL.md
+    │   └── references/
+    │       └── enterprise-edition.md
     ├── kestra-ops/
     │   └── SKILL.md
     ├── migrate-airflow-kestra/
